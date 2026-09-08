@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+
+    <video id="video-fundo" autoplay loop muted playsinline>
+        <source src="boy.mp4" type="video/mp4">
+    </video>
+
+    <header>
+        <h1>cadastro</h1>
+    </header>
+    
+    <main>
+        <nav class="campo">
+            <ul>
+                <li class="">
+                    <!-- GIF da banana -->
+                    <img src="banana.gif" alt="Banana GIF" class="gif-banana">
+                    <a href="http://127.0.0.1:3000/crud/CRUD.html?serverWindowId=2625b8eb-fc3f-42f6-a205-964af0757119">
+                        volta</a>
+                </li>
+            </ul>
+        </nav>
+        <p id="mensagem"></p>
+        <form action="" id="formProduto">
+            <div class="campo">
+                <label for="sexualidade">nome</label>
+                <input type="text"
+                 id="sexualidade" 
+                name="nome" 
+                placeholder="ex: jasinto "
+                 >
+            </div>
+            
+            <div class="campo">
+                <label for="cor">item</label>
+                <input type="number" 
+                id="cor"
+                name="cor"
+                 placeholder="Ex: azul"
+                 min="0"
+                 max="100"
+                  >
+            </div>
+            
+            <div class="campo">
+                <label for="categoria">sexo</label>
+                <select name="categoria" id="categoria">
+                    <option value="">gay</option>
+                    <option value="escolhei vc">heterosexual</option>
+                    <option value="nun sei">bisexual</option>
+                    <option value="bolsonaro">bolsonaro</option>
+                </select>
+            </div>
+            
+            <div>
+                <button type="submit">
+                    onde é que o cara mija aqui?
+                </button>
+            </div>
+        </form>
+    </main>
+
+    <!-- Script completo com recarga, tiros, tremor, foco e explosão no enviar -->
+    <script>
+
+        document.body.addEventListener('click', () => {
+            if (!window.jaCarregouArma) {
+                const somRecarga = new Audio('reload.mp3');
+                somRecarga.volume = 0.7;
+                somRecarga.play().catch(e => console.log("Aguardando interação..."));
+                window.jaCarregouArma = true;
+            }
+        }, { once: false });
+
+        // Escuta qualquer tecla pressionada para o tiro e tremor
+        document.addEventListener('keydown', (event) => {
+            if (event.key.length > 1 && event.key !== 'Enter' && event.key !== 'Backspace') {
+                return;
+            }
+
+            const tiro = new Audio('shot.mp3');
+            tiro.preload = 'auto';
+            tiro.load();
+            tiro.play().catch(error => console.log("Clique na tela primeiro."));
+
+            document.body.classList.add('efeito-tremer');
+            setTimeout(() => {
+                document.body.classList.remove('efeito-tremer');
+            }, 100); 
+        });
+
+        const formulario = document.querySelector('form');
+        formulario.addEventListener('submit', (event) => {
+            event.preventDefault(); 
+
+            const somExplosao = new Audio('explosion.mp3');
+            somExplosao.play().catch(e => console.log("Erro ao tocar explosão"));
+
+            document.body.style.animation = 'tremer 0.6s linear 3';
+            
+            setTimeout(() => {
+                formulario.submit();
+            }, 1500);
+        });
+    </script>
+    <script src="casdatro.js">
+
+    </script>
+</body>
+</html>

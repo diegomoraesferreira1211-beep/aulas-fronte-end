@@ -1,0 +1,150 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Fixa o vídeo cobrindo 100% do fundo da tela */
+#video-fundo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover; /* Faz o vídeo cobrir a tela sem distorcer */
+    z-index: -1; /* Envia o vídeo para trás de todos os elementos */
+}
+
+/* Quadrado preto removido! Mantive apenas a largura e o espaçamento */
+main {
+    padding: 30px;
+    width: 320px;
+}
+
+header h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9), -2px -2px 4px rgba(0, 0, 0, 0.9);
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: chocolate;
+    gap: 5px;
+}
+
+/* Adicionado sombra no texto das perguntas para dar leitura sem o fundo preto */
+label {
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9);
+}
+
+input, select, button {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #444;
+    outline: none;
+    font-size: 16px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+input, select {
+    background-color: rgba(47, 47, 47, 0.85); /* Um pouco transparente para combinar com o tema */
+    color: #fff;
+    font-family: monospace;
+}
+
+input::placeholder {
+    color: #ccc;
+    font-family: Ari;
+}
+
+option {
+    background-color: #222;
+    color: #fff;
+}
+
+button {
+    background-color: #ffd000;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+    margin-top: 10px;
+    border: none;
+    font-family: unset;
+}
+
+button:hover {
+    background-color: peru;
+    cursor: pointer;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+    text-align: center;
+}
+
+nav a {
+    color: #ff0000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+@keyframes tremer {
+    0% { transform: translate(0, 0); }
+    20% { transform: translate(-2px, 2px); }
+    40% { transform: translate(-2px, -2px); }
+    60% { transform: translate(2px, 2px); }
+    80% { transform: translate(2px, -2px); }
+    100% { transform: translate(0, 0); }
+}
+
+.efeito-tremer {
+    animation: tremer 0.1s linear;
+}
+
+
+@keyframes tremer {
+    0% { transform: translate(0, 0); }
+    20% { transform: translate(-2px, 2px); }
+    40% { transform: translate(-2px, -2px); }
+    60% { transform: translate(2px, 2px); }
+    80% { transform: translate(2px, -2px); }
+    100% { transform: translate(0, 0); }
+}
+
+.efeito-tremer {
+    animation: tremer 0.1s linear;
+}
+
+nav ul li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.gif-banana {
+    width: 150px; 
+    margin-bottom: 5px; 
+}
+
+imput:focus{
+    border: 1px sp;
+}
